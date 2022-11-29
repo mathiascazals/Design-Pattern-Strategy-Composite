@@ -1,3 +1,5 @@
+package Composite;
+
 
 public class Moteur implements Composant {
 

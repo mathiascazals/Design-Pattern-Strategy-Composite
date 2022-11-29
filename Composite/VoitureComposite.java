@@ -1,36 +1,36 @@
+package Composite;
+
 import java.util.*;
 
 public class VoitureComposite implements Composant {
 
-	private Collection children;
+	private List<Composant> composants;
 
     public VoitureComposite() {
-        children = new ArrayList();
+        composants = new ArrayList<Composant>();
     }
 
   
     public void add(Composant composant){
      
-        children.add(composant);
+    	composants.add(composant);
     }
 
   
     public void remove(Composant composant){
-        children.remove(composant);
+    	composants.remove(composant);
     }
 
-    public Iterator getChildren() {
-        return children.iterator();
+    public Iterator<Composant> getChildren() {
+        return composants.iterator();
     }
 	
 	@Override
     public int getPrice() {
         int result = 0;
-        for (Iterator i = children.iterator(); i.hasNext(); ) {
+        for (Iterator<Composant> i = composants.iterator(); i.hasNext(); ) {
             Object objet = i.next();
-			
             Composant composant = (Composant)objet;
-
             result += composant.getPrice();
         }
         return result;

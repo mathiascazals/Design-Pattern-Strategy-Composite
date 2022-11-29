@@ -1,11 +1,10 @@
 package Composite;
 
-
-public class Roue implements Composant {
+public class Carrosserie implements Composant {
 
 	private int price;
-   
-    public Roue(int price) {
+	   
+    public Carrosserie(int price) {
 		this.price = price;
     }
     
@@ -13,4 +12,5 @@ public class Roue implements Composant {
     public int getPrice() {
         return this.price;
     }
+
 }
