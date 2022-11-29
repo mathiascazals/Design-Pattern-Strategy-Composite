@@ -21,11 +21,7 @@ public class VoitureComposite implements Composant {
     	composants.remove(composant);
     }
 
-    public Iterator<Composant> getChildren() {
-        return composants.iterator();
-    }
-	
-	@Override
+    @Override
     public int getPrice() {
         int result = 0;
         for (Iterator<Composant> i = composants.iterator(); i.hasNext(); ) {
