@@ -12,8 +12,11 @@ public class VoitureComposite implements Composant {
 
   
     public void add(Composant composant){
-     
     	composants.add(composant);
+    }
+	
+    public void add(Shape... components) {
+        children.addAll(Arrays.asList(components));
     }
 
   
